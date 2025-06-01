@@ -164,7 +164,7 @@ if ('requestIdleCallback' in window) {
     </Lable>
     <label>
       Masse Spin:
-      <input type="range" id="spin" min="-500" max="500" value="0" />
+      <input type="range" id="spin" min="-600" max="600" value="0" />
     </label>
     <label>
       Vertical Spin:
@@ -926,32 +926,32 @@ document.addEventListener("keydown", (e) => {
     let predictionSticky = false; // If true, keep prediction visible after shot
 
     document.addEventListener("keydown", (e) => {
-      if (e.key.toLowerCase() === "o") {
-      predictionMode = 0; // Off
-      console.log("Prediction mode: Off");
-      } else if (e.key.toLowerCase() === "k") {
-      predictionMode = 1; // Single Shot
-      console.log("Prediction mode: Single Shot");
-      } else if (e.key.toLowerCase() === "i") {
-      predictionMode = 2; // Full Tree
-      console.log("Prediction mode: Full Tree");
-      } else if (e.key.toLowerCase() === "l") {
-      predictionMode = 3; // Advanced Prediction
-      console.log("Prediction mode: Advanced Prediction");
-      } else if (e.key.toLowerCase() === "j") {
-      predictionMode = 4; // All Possible Shots (Decision Tree)
-      console.log("Prediction mode: All Possible Shots (Decision Tree)");
-      } else if (e.key.toLowerCase() === "m") {
-      predictionMode = 5; // Multi Ball
-      console.log("Prediction mode: Multi Ball");
-      } else if (e.key.toLowerCase() === "p") {
-      predictionSticky = !predictionSticky;
-      console.log("Prediction sticky:", predictionSticky ? "ON" : "OFF");
-      }
-      alert(`Prediction mode set to: ${predictionMode} (Sticky: ${predictionSticky})`);
-      console.log(`Prediction mode set to: ${predictionMode} (Sticky: ${predictionSticky})`);
-      
-    });
+  if (e.key.toLowerCase() === "o") {
+    predictionMode = 0; // Off
+    console.log("Prediction mode: Off");
+  } else if (e.key.toLowerCase() === "k") {
+    predictionMode = 1; // Single Shot
+    console.log("Prediction mode: Single Shot");
+  } else if (e.key.toLowerCase() === "i") {
+    predictionMode = 2; // Full Tree
+    console.log("Prediction mode: Full Tree");
+  } else if (e.key.toLowerCase() === "l") {
+    predictionMode = 3; // Advanced Prediction
+    console.log("Prediction mode: Advanced Prediction");
+  } else if (e.key.toLowerCase() === "j") {
+    predictionMode = 4; // All Possible Shots (Decision Tree)
+    console.log("Prediction mode: All Possible Shots (Decision Tree)");
+  } else if (e.key.toLowerCase() === "m") {
+    predictionMode = 5; // Multi Ball
+    console.log("Prediction mode: Multi Ball");
+  } else if (e.key.toLowerCase() === "p") {
+    predictionSticky = !predictionSticky;
+    console.log("Prediction sticky:", predictionSticky ? "ON" : "OFF");
+  }
+  
+  console.log(`Prediction mode set to: ${predictionMode} (Sticky: ${predictionSticky})`);
+});
+
 
     // Helper: Generate N evenly spaced angles (in radians) around a circle
     function generateAngles(n) {
@@ -1599,5 +1599,6 @@ document.addEventListener("keydown", (e) => {
   </script>
 </body>
 </html>
+
 
 
